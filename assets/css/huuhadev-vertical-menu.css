@@ -1,0 +1,24 @@
+/*************** HuuHaDev Vertical Menu.   ***************/
+
+.huuhadev-vertical-menu .current-dropdown>.nav-dropdown{
+    left: 100%;
+    top: 0;
+    opacity: 1;
+    padding: 0;
+}
+.nav-dropdown-has-border .huuhadev-vertical-menu .nav-dropdown{
+    border: none;
+}
+.nav-dropdown-has-shadow .huuhadev-vertical-menu .nav-dropdown{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*************** END HuuHaDev Vertical Menu.   ***************/
+
+@media only screen and (max-width: 48em) {
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
+    .huuhadev-vertical-menu{
+        display: none;
+    }
+}

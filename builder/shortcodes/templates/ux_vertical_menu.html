@@ -1,0 +1,27 @@
+<!--Div vertical menu-->
+<div  id="{{:: shortcode.$id }}" wp-attachment="shortcode.options.bg"  class="ux-menu stack stack-col justify-start {{ shortcode.options.visibility }} {{ shortcode.options.class }} box-shadow-{{ shortcode.options.depth }} box-shadow-{{ shortcode.options.depthHover }}-hover"
+        ng-class="{['ux-menu--divider-'+shortcode.options.divider]: shortcode.options.divider,}"
+        ng-style="{'height' : shortcode.options.height, 'background-color': shortcode.options.bgColor}">
+
+    <!--Dev Row-->
+    <div class="row row-{{ shortcode.options.style }} row-{{ shortcode.options.design }} row-{{ shortcode.options.colStyle }} {{ shortcode.options.visibility }}"
+        ng-style="{'max-width' : (shortcode.options.width == 'custom') ? shortcode.options.customWidth : ''}">
+        <!-- Div col-->
+        <div class="col small-{{ shortcode.options.span }} col-hover-{{ shortcode.options.hover }} {{ shortcode.options.visibility }}"
+              data-fade="true"
+              ng-class="{dark: shortcode.options.color == 'light', 'col-divided': shortcode.options.divider, 'has-hover': shortcode.options.borderHover}"
+              ng-attr-data-parallax="{{ shortcode.options.parallax }}">
+            <!-- Div col inner-->
+            <div class="col-inner vertical-menu nav-dropdown-{{ shortcode.options.behavior }} text-{{ shortcode.options.align }}"
+               ng-attr-data-animate="{{ shortcode.options.animate }}" data-animated="true">
+                <content></content>
+            </div>
+      </div>
+
+      <style scope="scope">
+          #{{:: shortcode.$id }} > .row > .col > .col-inner{padding: {{ shortcode.options.col_padding }} }
+          #{{:: shortcode.$id }} > .row > .col > .col-inner{padding: {{ shortcode.options.col_margin }} }
+          #{{:: shortcode.$id }} > .row > .col > .col-inner{background-color: {{ shortcode.options.col_bg_color }} }
+      </style>
+  </div>
+</div>
